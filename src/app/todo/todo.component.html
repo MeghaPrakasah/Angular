@@ -1,0 +1,46 @@
+<!-- string interpolation : {{   }}
+property binding : [ ]=" "
+event binding : ( )=" "
+
+ -->
+
+<h1>
+    ToDo
+</h1>
+/*string interpolation*/
+<p>TODO 1 : {{todo1}}</p>
+
+/'property binding'/
+<button [disabled]="!completed" class="btn btn-primary">Completed</button>
+<br>
+
+/* Event bindig*/
+<button  class="btn btn-primary" (click)="onCompleted()">Button</button><br>
+
+
+<!-- /* Two way binding*/ <br> -->
+<!-- ng model,ng class,ng For,ng If,bg style are directive -->
+<br>
+<input type="text" class="form-control" [(ngModel)]="todo1">
+
+<!-- /* Directives are classes that add additional behavior to elements in your Angular applications.*/ -->
+
+<!-- <p *ngIf="completed">Button clicked</p> -->
+
+<p *ngIf="completed;else notCompleted" class="">Button clicked</p>
+<ng-template #notCompleted>
+<p>Button not clicked</p>
+</ng-template>
+
+<!-- <p [ngClass]="{className:condition}">{{completed}}</p> -->
+<!-- <p [ngClass]="{complete:completed}">{{completed}}</p> -->
+
+<p [ngClass]="{complete : completed,notcompleted: !completed}">{{completed}}</p>
+
+
+
+<p [ngStyle]="{backgroundColor:getColor()}">Button status</p>
+
+
+
+<p *ngFor="let todo of todos ; let i=index" >{{todo}} ({{i}})</p>

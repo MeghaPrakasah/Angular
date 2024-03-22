@@ -1,0 +1,14 @@
+<p>assignment works!</p>
+
+
+<p>USER NAME: {{twoWay}}</p>
+<input type="text" class="form-control" [(ngModel)]="twoWay" placeholder="Enter your Name" >
+
+
+<!-- <button [disabled]="!completed" class="btn btn-primary">Completed</button> -->
+
+
+<div>
+    Username: <input class="form-control" value="{{twoWay}}" readonly>
+</div>
+    <button (click)="resetUsername()" class="btn btn-primary" [disabled]="twoWay===''">Reset</button>

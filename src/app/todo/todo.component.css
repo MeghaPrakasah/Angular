@@ -1,0 +1,9 @@
+
+.complete{
+    background-color: greenyellow;
+    border: 1px solid green;
+}
+.notcompleted{
+    background-color: mistyrose;
+    border: 1px solid red;
+}
